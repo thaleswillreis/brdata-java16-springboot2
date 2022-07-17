@@ -1,0 +1,169 @@
+package com.homeoffice.brdata.entities;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Senso implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	private int ano;
+	private String cod_uf;
+	private String estado;
+	private String cod_mun;
+	private String nome_mun;
+	private String regiao;
+	private String cod_meso_reg;
+	private String nome_meso_reg;
+	private String cod_mic_reg;
+	private String nome_min_reg;
+	private double pib;
+	private int populacao;
+	private double pib_per_cap;
+	
+	public Senso() {	
+	}
+
+	public Senso(int ano, String cod_uf, String estado, String cod_mun, String nome_mun, String regiao,
+			String cod_meso_reg, String nome_meso_reg, String cod_mic_reg, String nome_min_reg, double d,
+			int populacao, double e) {
+		super();
+		this.ano = ano;
+		this.cod_uf = cod_uf;
+		this.estado = estado;
+		this.cod_mun = cod_mun;
+		this.nome_mun = nome_mun;
+		this.regiao = regiao;
+		this.cod_meso_reg = cod_meso_reg;
+		this.nome_meso_reg = nome_meso_reg;
+		this.cod_mic_reg = cod_mic_reg;
+		this.nome_min_reg = nome_min_reg;
+		this.pib = d;
+		this.populacao = populacao;
+		this.pib_per_cap = e;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+
+	public String getCod_uf() {
+		return cod_uf;
+	}
+
+	public void setCod_uf(String cod_uf) {
+		this.cod_uf = cod_uf;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getCod_mun() {
+		return cod_mun;
+	}
+
+	public void setCod_mun(String cod_mun) {
+		this.cod_mun = cod_mun;
+	}
+
+	public String getNome_mun() {
+		return nome_mun;
+	}
+
+	public void setNome_mun(String nome_mun) {
+		this.nome_mun = nome_mun;
+	}
+
+	public String getRegiao() {
+		return regiao;
+	}
+
+	public void setRegiao(String regiao) {
+		this.regiao = regiao;
+	}
+
+	public String getCod_meso_reg() {
+		return cod_meso_reg;
+	}
+
+	public void setCod_meso_reg(String cod_meso_reg) {
+		this.cod_meso_reg = cod_meso_reg;
+	}
+
+	public String getNome_meso_reg() {
+		return nome_meso_reg;
+	}
+
+	public void setNome_meso_reg(String nome_meso_reg) {
+		this.nome_meso_reg = nome_meso_reg;
+	}
+
+	public String getCod_mic_reg() {
+		return cod_mic_reg;
+	}
+
+	public void setCod_mic_reg(String cod_mic_reg) {
+		this.cod_mic_reg = cod_mic_reg;
+	}
+
+	public String getNome_min_reg() {
+		return nome_min_reg;
+	}
+
+	public void setNome_min_reg(String nome_min_reg) {
+		this.nome_min_reg = nome_min_reg;
+	}
+
+	public double getPib() {
+		return pib;
+	}
+
+	public void setPib(Float pib) {
+		this.pib = pib;
+	}
+
+	public int getPopulacao() {
+		return populacao;
+	}
+
+	public void setPopulacao(int populacao) {
+		this.populacao = populacao;
+	}
+
+	public double getPib_per_cap() {
+		return pib_per_cap;
+	}
+
+	public void setPib_per_cap(Float pib_per_cap) {
+		this.pib_per_cap = pib_per_cap;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cod_uf);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Senso other = (Senso) obj;
+		return Objects.equals(cod_uf, other.cod_uf);
+	}
+	
+	
+	
+
+}
