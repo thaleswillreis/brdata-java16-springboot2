@@ -3,11 +3,19 @@ package com.homeoffice.brdata.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity; //preferencia dada para a especificação ao invés da implementação do Hibernate
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Senso implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private int ano;
-	private String cod_uf;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int cod_uf;
 	private String estado;
 	private String cod_mun;
 	private String nome_mun;
@@ -23,7 +31,7 @@ public class Senso implements Serializable {
 	public Senso() {	
 	}
 
-	public Senso(int ano, String cod_uf, String estado, String cod_mun, String nome_mun, String regiao,
+	public Senso(int ano, int cod_uf, String estado, String cod_mun, String nome_mun, String regiao,
 			String cod_meso_reg, String nome_meso_reg, String cod_mic_reg, String nome_min_reg, double d,
 			int populacao, double e) {
 		super();
@@ -50,11 +58,11 @@ public class Senso implements Serializable {
 		this.ano = ano;
 	}
 
-	public String getCod_uf() {
+	public int getCod_uf() {
 		return cod_uf;
 	}
 
-	public void setCod_uf(String cod_uf) {
+	public void setCod_uf(int cod_uf) {
 		this.cod_uf = cod_uf;
 	}
 

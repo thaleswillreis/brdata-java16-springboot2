@@ -13,7 +13,7 @@ public class SensoResource {
 
 	@GetMapping
 	public ResponseEntity<Senso> findAll() {
-		Senso s = new Senso(2010, "21", "Maranhão", "2105302", "Imperatriz", "RM Sudoeste Maranhense", "2102",
+		Senso s = new Senso(2010, 21, "Maranhão", "2105302", "Imperatriz", "RM Sudoeste Maranhense", "2102",
 				"Oeste Maranhense", "21009", "Imperatriz", 2936194.000, 247553, 11861.000);
 		return ResponseEntity.ok().body(s);
 	}
