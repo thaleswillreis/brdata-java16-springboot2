@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Entity; //preferencia dada para a especificação ao invés da implementação do Hibernate
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -14,7 +14,7 @@ public class Senso implements Serializable {
 	
 	private int ano;
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@GeneratedValue(strategy = GenerationType.IDENTITY) Obs: comentei a geração automatica do cod_uf para fazer testes
 	private int cod_uf;
 	private String estado;
 	private String cod_mun;
